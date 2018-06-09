@@ -28,7 +28,7 @@ $(document).ready(() => {
         var a = $(this).attr("data-name");
 
         // change the limit to 10
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + a + "&api_key=bV49mdnvuKqv2rhb5kz2MFuwsFn1GPw8&limit=10";
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + a + "&api_key=bV49mdnvuKqv2rhb5kz2MFuwsFn1GPw8&limit=10";
 
         $.ajax({
             url: queryURL,
