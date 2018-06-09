@@ -14,3 +14,16 @@
 body{
     background-color: aliceblue;
 }
+
+#panel{
+    background-color: rgb(238, 234, 234);
+}
+
+#jumbotron2{
+    display: none;
+}
+
+#jumbotron1{
+    text-align: center;
+    margin-top: 5%;
+}

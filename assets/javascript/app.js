@@ -1,5 +1,13 @@
 $(document).ready(() => {
-    var topics = ["Mickey Mouse", "Sponge Bob", "Bugs Bunny", "Donald Duck", "Pink panther", "Pinocchio","Snow white", "Tiny toon", "The flinstones", "Scooby-Doo", "Garfield", "The Smurfs"];  // initial array of cartoons
+    var topics = ["Mickey Mouse", "Sponge Bob", "Bugs Bunny", "Donald Duck", "Pink panther", "Pinocchio", "Snow white", "Tiny toon", "The flinstones", "Scooby-Doo", "Garfield", "The Smurfs"];  // initial array of cartoons
+
+    $("#start").on("click", function (event) {
+
+    $("#jumbotron1").css("display", "none");
+    $("body").css("background","url(./assets/images/cartoon-network-old-shows-2005-wallpaper-3.jpg)");
+    $("#jumbotron2").css("display", "grid");
+
+    });
 
 
     $("#addButton").on("click", function (event) {
@@ -10,6 +18,7 @@ $(document).ready(() => {
 
         topics.push(text);
         renderButtons();
+        $('#input').val('').trim();
 
     });
 
@@ -30,13 +39,17 @@ $(document).ready(() => {
             //   $('#show-time').append(`<div>${response.Rated}</div>`);
             $('#show-time').empty();
 
+            var newPanel = $("<div>");
+            newPanel.addClass("panel panel-body");
+            newPanel.attr("id", "panel");
+
             var listCartoons = response.data;
 
             for (let i = 0; i < listCartoons.length; i++) {
                 var gif = $("<img>");
                 var p = $('<p>');
                 var newDiv = $('<div>');
-                 newDiv.addClass('eachImage');
+                newDiv.addClass('eachImage');
 
                 p.text(listCartoons[i].rating);
 
@@ -53,7 +66,9 @@ $(document).ready(() => {
                 newDiv.append(p);
                 newDiv.append(gif);
 
-                $("#show-time").append(newDiv);
+                newPanel.append(newDiv);
+
+                $("#show-time").append(newPanel);
             }
 
         });
@@ -81,7 +96,7 @@ $(document).ready(() => {
         for (var i = 0; i < topics.length; i++) {
             var but = $(`<button>`);
 
-            but.addClass("cartoon btn btn-primary btn-lg");
+            but.addClass("cartoon btn btn-primary btn-md");
 
             but.attr("data-name", topics[i]);
 

@@ -16,17 +16,24 @@
 
 </head>
 
-<body>
+<body background="./assets/images/441645.jpg">
     <div class="container">
 
-        <div class="jumbotron">
+        <div id="jumbotron1" class="jumbotron">
             <div class="row">
+                <h1>Start looking for cartoon's gifs:</h1>
+                <!-- Button triggers new  to be added -->
+                <input id="start" type="submit" value=" Start " class="btn btn-primary btn-lg">
+
+            </div>
+
+        </div>
+
+        <div id="jumbotron2" class="jumbotron">
+            <div class="row">
+                <div id="cartoonbuttons"></div>
                 <div class="col-md-8">
-                    <h1>Cartoon search</h1>
-                    <div id="cartoonbuttons">
-
-                    </div>
-
+                    <h1>Cartoon search:</h1>
                 </div>
                 <div class="col-md-4">
                     <form class="formCartoon">
@@ -35,7 +42,7 @@
                         <br>
 
                         <!-- Button triggers new  to be added -->
-                        <input id="addButton" type="submit" value="Add a new Cartoon" class="btn btn-primary btn-lg">
+                        <input id="addButton" type="submit" value="Add a new Cartoon" class="btn btn-primary ">
                     </form>
                 </div>
             </div>
