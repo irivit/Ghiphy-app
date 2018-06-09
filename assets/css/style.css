@@ -1,0 +1,16 @@
+.cartoon{
+    margin: 10px;
+}
+
+.formCartoon{
+    margin-top: 10%;
+}
+
+.eachImage{
+    margin: 10px;  
+    float: left;
+}
+
+body{
+    background-color: aliceblue;
+}
