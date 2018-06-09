@@ -3,9 +3,9 @@ $(document).ready(() => {
 
     $("#start").on("click", function (event) {
 
-    $("#jumbotron1").css("display", "none");
-    $("body").css("background","url(./assets/images/cartoon-network-old-shows-2005-wallpaper-3.jpg)");
-    $("#jumbotron2").css("display", "grid");
+        $("#jumbotron1").css("display", "none");
+        $("body").css("background", "url(./assets/images/cartoon-network-old-shows-2005-wallpaper-3.jpg)");
+        $("#jumbotron2").css("display", "grid");
 
     });
 
@@ -16,9 +16,14 @@ $(document).ready(() => {
         // Here we grab the text from the input box
         var text = $('#input').val().trim();
 
-        topics.push(text);
-        renderButtons();
-        $('#input').val('').trim();
+        if (text == "") {
+            alert("You must to write the name of the cartoon");
+        } else {
+            topics.push(text);
+            renderButtons();
+            $('#input').val('').trim();
+        }
+
 
     });
 
