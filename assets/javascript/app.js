@@ -12,12 +12,14 @@ $(document).ready(() => {
 
     $("#addButton").on("click", function (event) {
         event.preventDefault();
-
+        $("#error").text('');
         // Here we grab the text from the input box
         var text = $('#input').val().trim();
 
         if (text == "") {
-            alert("You must to write the name of the cartoon");
+            var alert = "* You must to write the name of the cartoon."
+            $("#error").text(alert);
+
         } else {
             topics.push(text);
             renderButtons();

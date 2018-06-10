@@ -31,3 +31,7 @@ body{
 h1{
     font-family: 'Rum Raisin', sans-serif;
 }
+
+#error{
+    color: red;
+}
